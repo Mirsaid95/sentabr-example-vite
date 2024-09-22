@@ -1,4 +1,4 @@
-const baseUrl = "https://fakestoreapi.com/products";
+const baseUrl = "https://fakestoreapi.com";
 
 export async function getData(path) {
     try {

@@ -1,0 +1,19 @@
+.drower{
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 40%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    transition: all 0.5s ease;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-y: scroll;
+    padding: 20px;
+
+}
+.drower.active{
+    left: 0px;
+}

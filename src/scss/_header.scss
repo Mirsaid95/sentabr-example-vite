@@ -1,15 +1,17 @@
 .header {
-    width: 100%;
-    padding: 10px 0;
-    width: 1240px;
-    width: auto;
-    padding: 20px 20px;
+    border-color: orange;
+    padding: 10px 20px;
+    
 
     &__navbar {
         width: 100%;
+        height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid gray;
+        padding-bottom: 13px;
+        padding-top: 5px;
     }
 
     &__navbar-select {
@@ -21,11 +23,11 @@
         select {
             width: 80px;
             height: 30px;
-            border: 1px solid #000;
+            border: none;
             border-radius: 5px;
             padding: 0 5px;
             outline: none;
-            border: 1px solid gray;
+
             cursor: pointer;
         }
     }
@@ -70,6 +72,7 @@
         outline: none;
         border: none;
         cursor: pointer;
+        position: relative;
     }
 
 
@@ -79,14 +82,14 @@
         color: rgb(204, 202, 202)
     }
     &__navbar-input-search{
-        width: 220px;
+        width: 240px;
         height: 30px;
         gap: 10px;
         display: flex;
         align-items: center;
         padding: 0 10px;
         // justify-content: center;
-        border: 1px solid gray;
+        border: 1px solid rgba(128, 128, 128, 0.182);
         border-radius: 5px;
         
     }
@@ -96,6 +99,45 @@
         background-color: transparent;
     }
     
-    
+    &__navbar-logo-links{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+    &__navbar-image{
+       width: 50%;
+    //    background-color: red;
+    }
+    &__lists{
+        width: 50%;
+        // background-color: orange;
+        display: flex;
+        align-items: center;
+        align-items: end;
+        justify-content: end;
+        gap: 70px;
+        
+    }
+    &__item-link{
+        &:hover{
+            color: blue;
+        }
+    }
+    &__navbar-btn-shopping{
+        position: relative;
+        font-size: 20px;
+        .show__count{
+            position: absolute;
+            top: -3px;
+            right: 30px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            font-size: 15px;
+    }
 }
-
+}
