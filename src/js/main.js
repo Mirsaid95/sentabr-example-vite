@@ -165,23 +165,23 @@ function renderLocal(){
         drower.innerHTML = '';
         localData.map(item =>{
             drower.innerHTML += `
-            <div class="bestSeller__product-card">
-                        <div class="bestSeller__product-card-image">
+            <div class="bestSeller__product-card drower-items">
+                        <div class="bestSeller__product-card-image drower-image">
                             <img src="${item.image}" alt="${item.title}">
                         </div>
-                        <div class="bestSeller__product-card-info">
-                            <h3 class="bestSeller__text">${item.title}</h3>
-                            <div class="bestSeller__product-card-price">
-                                <span>${item.price}</span>
-                                <span>${(item.price - (item.price / 100) * 24).toFixed(2)}</span>
-                                <span>-24% Off</span>
+                        <div class="bestSeller__product-card-info drower-title-list">
+                            <h3 class="bestSeller__text drower-text">${item.title}</h3>
+                            <div class="bestSeller__product-card-price drower-price-sale">
+                                <span class="drower-price">${item.price}$</span>
+                                <span class="drower-sale">-24% sale</span>
+                                <span class="drower-price-sale">${(item.price - (item.price / 100) * 24).toFixed(2)}$</span>
                             </div>
-                            <div class="bestSeller__product-card-rating">
-                                <span>${item.rating.count}</span>
-                                <span>${item.rating.rate}</span>
+                            <div class="bestSeller__product-card-rating drower-rating">
+                                <span class="drower-rating-count">${item.rating.count}<i class="fa-solid fa-eye"></i></span>
+                                <span class="drower-rating-count">${item.rating.rate}<i class="fa-solid fa-star"></i></span>
                             </div>
                         </div>
-                        <button data-delete="${item.id}" class="bestSeller__product-card-btn">Delete</button>
+                        <button data-delete="${item.id}" class="bestSeller__product-card-btn drower-delete">Delete</button>
                     </div>
             `
         })

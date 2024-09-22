@@ -12,8 +12,69 @@
     grid-template-columns: 1fr 1fr;
     overflow-y: scroll;
     padding: 20px;
+    gap: 20px;
+        
 
+    .drower-items{
+        width: 250px;
+        height: 400px;
+        align-items: flex-start;
+        text-align: start;
+        background-color: white;
+    }
+    .drower-image{
+        width: 100%;
+        // height: 100px;
+        img{
+            width: 70%;
+            height: 80%;
+        }
+    }
+    .drower-title-list{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+    }
+    .drower-text{
+        text-align: start;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .drower-price{
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: line-through;
+    }
+    .drower-sale{
+        font-size: 14px;
+        color: red;
+    }
+    .drower-price-sale{
+        font-size: 14px;
+        color: green;
+    }
+    .drower-rating{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .drower-rating-count{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .fa-eye{
+            color: blue;
+        }
+        .fa-star{
+            color: gold;
+        }
+    }
+    .drower-delete{
+        height: 40px;
+        background-color: red;
+    }
 }
+
 .drower.active{
     left: 0px;
 }
