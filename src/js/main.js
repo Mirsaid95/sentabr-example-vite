@@ -76,23 +76,23 @@ getData('products').then((data) => {
     data.map((item) => {
         bestSellerProductsCards.innerHTML += `
         <div class="bestSeller__product-card">
-                        <div class="bestSeller__product-card-image">
-                            <img src="${item.image}" alt="${item.title}">
-                        </div>
-                        <div class="bestSeller__product-card-info">
-                            <h3>${item.title}</h3>
-                            <div class="bestSeller__product-card-price">
-                                <span>${item.price}</span>
-                                <span>${(item.price - (item.price / 100) * 24).toFixed(2)}</span>
-                                <span>-24% Off</span>
-                            </div>
-                            <div class="bestSeller__product-card-rating">
-                                <span>${item.rating.count}</span>
-                                <span>${item.rating.rate}</span>
-                            </div>
-                        </div>
-                        <button data-path="products/${item.id}" class="bestSeller__product-card-btn">Add to cart</button>
+            <div class="bestSeller__product-card-image">
+                <img src="${item.image}" alt="${item.title}">
+            </div>
+                <div class="bestSeller__product-card-info">
+                    <h3 class="bestSeller__product-card-title">${item.title}</h3>
+                    <div class="bestSeller__product-card-price">
+                        <span class="bestSeller__price">${item.price}$</span>
+                        <span class="bestSeller__sale">-24% Off</span>
+                        <span class="bestSeller__sale-price">${(item.price - (item.price / 100) * 24).toFixed(2)}$</span>
                     </div>
+                    <div class="bestSeller__product-card-rating">
+                        <span class="bestSeller__rating-count">${item.rating.count}<i class="fa-solid fa-eye"></i></span>
+                        <span class="bestSeller__rating-rate">${item.rating.rate}<i class="fa-solid fa-star"></i></span>
+                    </div>
+                </div>
+                <button data-path="products/${item.id}" class="bestSeller__product-card-btn">Add to cart <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
         `
     })
 })
